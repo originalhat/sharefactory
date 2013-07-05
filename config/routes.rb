@@ -1,10 +1,12 @@
 Sharefactory::Application.routes.draw do
 
-  get 'snippets', to: 'snippets#index'
-  get 'users', to: 'users#index'
-  get 'login', to: 'logins#index'
-
   root :to => "snippets#index"
+
+  get 'user/register', to: 'registrations#index'
+  get 'user/login', to: 'logins#index'
+  get 'user/home', to: 'users#index'
+
+  get 'snippets', to: 'snippets#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
