@@ -2,7 +2,7 @@ Sharefactory::Application.routes.draw do
 
   get 'snippets', to: 'snippets#index'
   get 'users', to: 'users#index'
-  get 'login', to: 'login#index'
+  get 'login', to: 'logins#index'
 
   root :to => "snippets#index"
 
