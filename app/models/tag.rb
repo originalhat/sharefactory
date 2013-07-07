@@ -1,0 +1,4 @@
+class Tag < ActiveRecord::Base
+  attr_accessible :tagname
+  belongs_to :snippet
+end
