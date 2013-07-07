@@ -11,17 +11,45 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 2) do
+ActiveRecord::Schema.define(:version => 20130707213813) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "name",       :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "comments", :force => true do |t|
+    t.text     "content",    :null => false
+    t.integer  "upvote"
+    t.integer  "downvote"
+    t.integer  "linenumber"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "snippets", :force => true do |t|
+    t.text     "content",    :null => false
+    t.integer  "upvotes"
+    t.integer  "downvotes"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "tags", :force => true do |t|
+    t.string   "name",       :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
-    t.text "username"
-    t.text "email"
-    t.text "password"
-    t.text "fname"
-    t.text "lname"
+    t.string   "username",   :null => false
+    t.string   "email",      :null => false
+    t.string   "password",   :null => false
+    t.string   "fname",      :null => false
+    t.string   "lname",      :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
