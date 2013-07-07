@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  content: MyText
+  upvote: 1
+  downvote: 1
+  linenumber: 1
+
+two:
+  content: MyText
+  upvote: 1
+  downvote: 1
+  linenumber: 1
