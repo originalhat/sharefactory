@@ -2,4 +2,4 @@
 
 ## Overview
 
-Share and collaborate on code.
+Collaborate on code with colleagues quickly and effectively.
