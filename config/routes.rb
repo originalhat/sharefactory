@@ -2,13 +2,14 @@ Sharefactory::Application.routes.draw do
 
   devise_for :users
 
-  root :to => "snippets/#index"
+  root :to => "snippets#index"
+  #root :to => "devise/sessions#new"
 
-  #get 'user/register', to: 'registrations#index'
-  #get 'user/login', to: 'logins#index'
-  #get 'user/home', to: 'users#index'
-
-  #get 'snippets', to: 'snippets#index'
+  get 'user/register', to: 'registrations#index'
+  get 'user/login', to: 'logins#index'
+  get 'user/home', to: 'users#index'
+  get 'snippets', to: 'snippets#index'
+  #get 'users/sign_in', to: 'devise/sessions#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
