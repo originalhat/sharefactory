@@ -11,13 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130707213813) do
-
-  create_table "categories", :force => true do |t|
-    t.string   "name",       :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+ActiveRecord::Schema.define(:version => 20130707213239) do
 
   create_table "comments", :force => true do |t|
     t.text     "content",    :null => false
