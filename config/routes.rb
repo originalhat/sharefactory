@@ -4,8 +4,8 @@ Sharefactory::Application.routes.draw do
 
   root :to => "snippets#index"
 
-  get 'user/home', to: 'users#index'
-  get 'snippets', to: 'snippets#index'
+  get "/user", to: "users#index"
+  get "/snippets", to: "snippets#index"
 
   devise_scope :user do
     get "/login" => "devise/sessions#new"
