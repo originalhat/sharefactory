@@ -11,6 +11,11 @@
       %ul.nav
         %li
           %a{:href => "/snippets"} Snippets
+        - if user_signed_in?
+          %li= link_to "Log Out", destroy_user_session_path, method: :delete
+        - else
+          %li= link_to "Login", new_user_session_path
+          %li= link_to "Register", new_user_registration_path
       / Everything you want hidden at 940px or less, place within here
       .nav-collapse.collapse
         / .nav, .navbar-search, .navbar-form, etc
