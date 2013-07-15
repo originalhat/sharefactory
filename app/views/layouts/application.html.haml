@@ -6,8 +6,9 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    .container
+    .container-fluid
       = render "shared/navbar"
       = render "shared/alerts"
-      = yield
+      #inner-content
+        = yield
       = render "shared/footer"
