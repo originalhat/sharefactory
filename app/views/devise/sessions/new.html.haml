@@ -1,0 +1,23 @@
+%h2.form-offset Sign in
+= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+  .form-horizontal
+    .control-group
+      %label.control-label{:for => "inputEmail"}
+        = f.label :email
+      .controls
+        %input#user_email{:placeholder => "Email", :name => "user[email]", :size => "30", :type => "email", :value => ""}/
+    .control-group
+      %label.control-label{:for => "inputPassword"} Password
+      .controls
+        %input#user_password{:placeholder => "Password", :name => "user[password]", :size => "30", :type => "password"}/
+
+    .control-group
+      - if devise_mapping.rememberable?
+        .controls
+          %label.checkbox
+            %input{:type => "checkbox"}/
+            = f.label :remember_me
+          %button.btn{:type => "submit"} Sign in
+
+  .form-offset
+    = render "devise/shared/links"
