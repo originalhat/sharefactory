@@ -7,13 +7,7 @@
     = csrf_meta_tags
   %body
     .container
-      .hero-unit
-        %h1.text-center S H A R E F A C T O R Y
-
-      - if notice or alert
-        .notice
-          = notice
-        .alert
-          = alert
-
+      = render "shared/navbar"
+      = render "shared/alerts"
       = yield
+      = render "shared/footer"
