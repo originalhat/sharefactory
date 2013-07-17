@@ -7,10 +7,10 @@
         %span.icon-bar
       %a.brand{:href => "/"} SHAREFACTORY
       %ul.nav
-        %li
+        %li{:class => (params[:controller] == 'snippets') ? 'active' : ''}
           %a{:href => "/snippets"} Snippets
         - if user_signed_in?
-          %li
+          %li{:class => (params[:controller] == 'devise/registrations') ? 'active' : ''}
             %a{:href => "/settings"} Settings
       %ul.nav.pull-right
         - if user_signed_in?
