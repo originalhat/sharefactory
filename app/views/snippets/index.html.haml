@@ -1,6 +1,11 @@
 %style{:media => "screen", :type => "text/css"}
-
 %pre#editor
-
+  :preserve
+    def slut
+      puts "my tits are on fire"
+    end
+%script{:charset => "utf-8", :src => "src-noconflict/ace.js", :type => "text/javascript"}
 :javascript
   var editor = ace.edit("editor");
+  editor.setTheme("ace/theme/twilight");
+  editor.getSession().setMode("ace/mode/ruby");

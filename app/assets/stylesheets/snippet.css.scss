@@ -1,1 +1,6 @@
-#editor { height: 800px; }
+#editor {
+  height: 800px;
+  border-radius: 0;
+}
+
+.ace_gutter, .ace_scroller {padding-top: 10px;}
