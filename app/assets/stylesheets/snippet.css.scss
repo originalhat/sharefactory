@@ -1,6 +1,13 @@
 #editor {
-  height: 800px;
+  min-height: 800px;
+  max-width: 700px;
   border-radius: 0;
+  margin: {
+    right: auto;
+    left: auto;
+  }
 }
 
 .ace_gutter, .ace_scroller {padding-top: 10px;}
+.ace_scrollbar {display: none;}
+.ace_print-margin {display: none;}
