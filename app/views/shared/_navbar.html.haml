@@ -6,16 +6,16 @@
         %span.icon-bar
         %span.icon-bar
       %a.brand{:href => "/"} SHAREFACTORY
-      %ul.nav
-        %li{:class => (params[:controller] == 'snippets') ? 'active' : ''}
-          %a{:href => "/snippets"} Snippets
-        - if user_signed_in?
-          %li{:class => (params[:controller] == 'devise/registrations') ? 'active' : ''}
-            %a{:href => "/settings"} Settings
-      %ul.nav.pull-right
-        - if user_signed_in?
-          %li= link_to "Log Out", destroy_user_session_path, method: :delete
-        - else
-          %li= link_to "Login", new_user_session_path
-          %li= link_to "Register", new_user_registration_path
       .nav-collapse.collapse
+        %ul.nav
+          %li{:class => (params[:controller] == 'snippets') ? 'active' : ''}
+            %a{:href => "/snippets"} Snippets
+          - if user_signed_in?
+            %li{:class => (params[:controller] == 'devise/registrations') ? 'active' : ''}
+              %a{:href => "/settings"} Settings
+        %ul.nav.pull-right
+          - if user_signed_in?
+            %li= link_to "Log Out", destroy_user_session_path, method: :delete
+          - else
+            %li= link_to "Login", new_user_session_path
+            %li= link_to "Register", new_user_registration_path
