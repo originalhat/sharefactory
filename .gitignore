@@ -11,12 +11,10 @@ spec/reports
 test/tmp
 test/version_tmp
 tmp
+*.DS_Store
 
 # YARD artifacts
 .yardoc
 _yardoc
-<<<<<<< HEAD
 log/*
-=======
 
->>>>>>> Added doc folder and ERD and OneNote File (I'll need to change this onenote shit at some point unless you get with the microsoft productivity suite.)
